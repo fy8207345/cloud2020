@@ -29,6 +29,7 @@ public class PaymentController {
     @GetMapping("/get/{id}")
     public CommonResult<Payment> get(@PathVariable("id") Long id){
         Payment payment = paymentService.getPaymentById(id);
+        System.out.println(3435);
         if(payment != null){
             return new CommonResult<Payment>(200, "成功", payment);
         }

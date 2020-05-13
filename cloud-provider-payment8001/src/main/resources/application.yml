@@ -12,6 +12,12 @@ spring:
     password: root
     druid:
       validation-query: select 1
+  devtools:
+    livereload:
+      enabled: true
+    remote:
+      restart:
+        enabled: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
