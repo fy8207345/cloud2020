@@ -15,6 +15,7 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Integer create(Payment payment) {
+        System.out.println("create called :" + payment);
         return paymentDao.create(payment);
     }
 
