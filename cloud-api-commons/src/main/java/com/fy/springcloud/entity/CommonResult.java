@@ -1,4 +1,4 @@
-package com.fy.springcloud.payment.entity;
+package com.fy.springcloud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

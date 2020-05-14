@@ -1,6 +1,6 @@
 package com.fy.springcloud.payment.service;
 
-import com.fy.springcloud.payment.entity.Payment;
+import com.fy.springcloud.entity.Payment;
 
 public interface PaymentService {
 

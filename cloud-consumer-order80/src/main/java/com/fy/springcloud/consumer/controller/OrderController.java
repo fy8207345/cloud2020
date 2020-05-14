@@ -1,7 +1,7 @@
 package com.fy.springcloud.consumer.controller;
 
-import com.fy.springcloud.consumer.entity.CommonResult;
-import com.fy.springcloud.consumer.entity.Payment;
+import com.fy.springcloud.entity.CommonResult;
+import com.fy.springcloud.entity.Payment;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 

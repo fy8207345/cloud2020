@@ -22,4 +22,4 @@ spring:
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.fy.springcloud.payment.entity
+  type-aliases-package: com.fy.springcloud.entity
