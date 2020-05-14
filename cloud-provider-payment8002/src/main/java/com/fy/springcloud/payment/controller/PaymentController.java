@@ -40,7 +40,7 @@ public class PaymentController {
         Payment payment = paymentService.getPaymentById(id);
         log.info("calling server port : {}", serverPort);
         if(payment != null){
-            return new CommonResult<Payment>(200, "成功:"+serverPort, payment);
+            return new CommonResult<Payment>(200, "成功"+serverPort, payment);
         }
         return new CommonResult<>(0, "失败"+serverPort);
     }
