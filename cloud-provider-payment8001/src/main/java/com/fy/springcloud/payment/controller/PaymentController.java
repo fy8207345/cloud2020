@@ -58,4 +58,14 @@ public class PaymentController {
         }
         return discoveryClient;
     }
+
+    @GetMapping("/feignTimeout")
+    public String feignTimeout(){
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return "feignTimeout : " + serverPort;
+    }
 }
