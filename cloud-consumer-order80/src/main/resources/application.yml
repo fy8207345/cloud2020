@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-order-service
+  datasource:
+    driver-class-name: org.gjt.mm.mysql.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/springcloud2020?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: root
+    druid:
+      validation-query: select 1
+  devtools:
+    livereload:
+      enabled: true
+    restart:
+      enabled: true
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.fy.springcloud.payment.entity

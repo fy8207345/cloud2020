@@ -3,3 +3,6 @@ create table `payment`(
 `serial` varchar(200) default '',
 primary key (`id`)
 ) engine = innodb auto_increment=1 default charset=utf8mb4;
+
+insert into `payment`(serial) values('1111');
+insert into `payment`(serial) values('2222');
