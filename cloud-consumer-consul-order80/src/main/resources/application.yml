@@ -13,8 +13,11 @@ spring:
     log-request-details: true
   cloud:
     consul:
+      host: localhost
+      port: 8500
       discovery:
-        order: 0
+        service-name: ${spring.application.name}
+      enabled: true
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
