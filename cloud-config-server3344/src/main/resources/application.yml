@@ -1,0 +1,28 @@
+server:
+  port: 3344
+
+spring:
+  application:
+    name: cloud-config-server
+  http:
+    log-request-details: true
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://gitee.com/quieter/cloud2020-config.git
+          search-paths:
+            - cloud2020-config
+          username: 2316696377@qq.com
+          password: F198788y!@
+      label: master
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #集群
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      #单机
+      defaultZone: http://eureka7001.com:7001/eureka/
