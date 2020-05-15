@@ -7,13 +7,13 @@ spring:
       uri: http://localhost:3344
   application:
     name: cloud-config-client
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
+    rabbitmq:
+      host: localhost
+      port: 5672
+      username: guest
+      password: guest
 server:
-  port: 3355
+  port: 3366
 
 eureka:
   client:
