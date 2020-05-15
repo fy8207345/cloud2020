@@ -30,6 +30,8 @@
     <module>cloud-stream-rabbitmq-provider8801</module>
     <module>cloud-stream-rabbit-consumer8802</module>
     <module>cloud-stream-rabbit-consumer8803</module>
+    <module>cloud-nacos-server9001</module>
+    <module>cloud-nacos-server9002</module>
   </modules>
   <packaging>pom</packaging>
 
