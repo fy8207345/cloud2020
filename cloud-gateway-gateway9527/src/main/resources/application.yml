@@ -1,0 +1,33 @@
+server:
+  port: 9527
+
+spring:
+  application:
+    name: cloud-gateway
+  http:
+    log-request-details: true
+  cloud:
+    gateway:
+      routes:
+        - id: cloud-payment-hystrix
+          uri: lb://cloud-provider-hystrix-payment
+          predicates:
+            - Path=/payment/hystrix/**
+        - id: cloud-payment-hystrix2
+          uri: lb://cloud-provider-hystrix-payment
+          predicates:
+            - Path=/payment/circuit/**
+            - After=2020-05-15T12:31:02.754+08:00[Asia/Shanghai]
+      discovery:
+        locator:
+          enabled: true
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      #集群
+#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/,http://eureka7003.com:7003/eureka/
+      #单机
+      defaultZone: http://eureka7001.com:7001/eureka/
