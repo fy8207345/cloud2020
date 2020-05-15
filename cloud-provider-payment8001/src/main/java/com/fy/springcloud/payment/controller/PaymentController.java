@@ -68,4 +68,9 @@ public class PaymentController {
         }
         return "feignTimeout : " + serverPort;
     }
+
+    @GetMapping("/zipkin")
+    public String zipkin(){
+        return "zipkin message!";
+    }
 }

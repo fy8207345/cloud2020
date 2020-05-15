@@ -31,4 +31,9 @@ public class OrderController {
     public Object getDiscovery(){
         return restTemplate.getForObject(PAYMENT_URL + "/discovery", Object.class);
     }
+
+    @GetMapping("/zipkin")
+    public String zipkin(){
+        return restTemplate.getForObject(PAYMENT_URL + "/zipkin", String.class);
+    }
 }
