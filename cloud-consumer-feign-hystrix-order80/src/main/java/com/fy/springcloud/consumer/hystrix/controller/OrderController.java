@@ -44,7 +44,7 @@ public class OrderController {
     @GetMapping("/circuit/{id}")
     public String circuit(@PathVariable("id") Long id){
         String result = paymentHystrixService.circuit(id);
-        log.info("****timeout result: {}", result);
+        log.info("****circuit result: {}", result);
         return result;
     }
 }
