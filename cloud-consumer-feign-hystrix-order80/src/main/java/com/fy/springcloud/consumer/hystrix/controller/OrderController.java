@@ -4,12 +4,14 @@ import com.fy.springcloud.consumer.hystrix.service.PaymentHystrixService;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@Slf4j
 @RestController
 @RequestMapping("/order/hystrix")
 @DefaultProperties(defaultFallback = "globalFallback")
@@ -37,5 +39,12 @@ public class OrderController {
 
     public String globalFallback(){
         return "GlobalFallback!!!";
+    }
+
+    @GetMapping("/circuit/{id}")
+    public String circuit(@PathVariable("id") Long id){
+        String result = paymentHystrixService.circuit(id);
+        log.info("****timeout result: {}", result);
+        return result;
     }
 }

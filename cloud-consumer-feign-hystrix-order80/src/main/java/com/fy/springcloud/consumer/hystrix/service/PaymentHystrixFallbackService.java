@@ -14,4 +14,9 @@ public class PaymentHystrixFallbackService implements PaymentHystrixService{
     public String timeout(Long id) {
         return "PaymentHystrixFallbackService timeout!";
     }
+
+    @Override
+    public String circuit(Long id) {
+        return "PaymentHystrixFallbackService circuit!";
+    }
 }
