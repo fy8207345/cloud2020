@@ -7,7 +7,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class FlowLimitController {
 
     @GetMapping("/flowA")
-    public String flowA(){
+    public String flowA() {
+        try {
+            Thread.sleep(800);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         return "flowA";
     }
 
