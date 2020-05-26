@@ -6,12 +6,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.0.112:1111
+        server-addr: localhost:8848
         enabled: true
     sentinel:
       transport:
         dashboard: localhost:8080
         port: 8719
+        client-ip: 127.0.0.1
 management:
   endpoints:
     web:
