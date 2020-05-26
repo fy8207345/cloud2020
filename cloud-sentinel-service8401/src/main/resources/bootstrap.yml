@@ -8,13 +8,24 @@ spring:
       discovery:
         server-addr: localhost:8848
         enabled: true
+      config:
+        enabled: true
+        server-addr: localhost:8848
+        file-extension: yml
     sentinel:
       transport:
         dashboard: localhost:8080
         port: 8719
         client-ip: 127.0.0.1
+  profiles:
+    active: dev
+
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+logging:
+  level:
+    org.springframework.cloud.endpoint.event.RefreshEventListener: trace
