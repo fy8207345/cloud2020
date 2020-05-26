@@ -9,7 +9,10 @@ spring:
       discovery:
         enabled: true
         server-addr: localhost:8848
+        namespace: 820457f5-ec08-49e0-b04f-68ace32db4f4
       config:
         enabled: true
         server-addr: localhost:8848
         file-extension: yml
+        group: TEST_GROUP
+        namespace: 5b6f46b6-ae45-46b3-b39b-674937aaede9
