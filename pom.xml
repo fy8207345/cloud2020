@@ -35,6 +35,8 @@
     <module>cloud-nacos-consumer83</module>
       <module>cloud-nacos-config-client3377</module>
       <module>cloud-sentinel-service8401</module>
+      <module>cloud-consumer-nacos-order84</module>
+    <module>cloud-nacos-provider-payment9003</module>
   </modules>
   <packaging>pom</packaging>
 
