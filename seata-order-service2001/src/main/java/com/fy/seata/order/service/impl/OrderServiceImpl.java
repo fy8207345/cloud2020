@@ -23,7 +23,6 @@ public class OrderServiceImpl implements OrderService {
     @Autowired
     private AccountService accountService;
 
-    @Transactional
     @GlobalTransactional
     @Override
     public Order create(Order order) {
