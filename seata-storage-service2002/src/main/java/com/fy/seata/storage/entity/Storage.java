@@ -1,4 +1,4 @@
-package com.fy.seata.order.entity;
+package com.fy.seata.storage.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -6,21 +6,19 @@ import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.math.BigDecimal;
 
 @Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Table(name = "t_order")
-public class Order implements Serializable {
+@Table(name = "t_storage")
+public class Storage implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Long userId;
     private Long productId;
-    private Integer count;
-    private BigDecimal money;
-    private Integer status;
+    private Integer total;
+    private Integer userd;
+    private Integer residue;
 }

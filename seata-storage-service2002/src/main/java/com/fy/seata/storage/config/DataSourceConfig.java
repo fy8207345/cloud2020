@@ -1,4 +1,4 @@
-package com.fy.seata.order.config;
+package com.fy.seata.storage.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import io.seata.rm.datasource.DataSourceProxy;
@@ -35,7 +35,7 @@ public class DataSourceConfig {
 //
 //        LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
 //        em.setDataSource(dataSourceProxy());
-//        em.setPackagesToScan("com.fy.seata.order");
+//        em.setPackagesToScan("com.fy.seata.storage");
 //        JpaVendorAdapter vendorAdapter = new HibernateJpaVendorAdapter();
 //        em.setJpaVendorAdapter(vendorAdapter);
 //
